@@ -2,7 +2,7 @@
 
 # Script: temp_log.sh
 # Purpose: Log temperature of hw to /var/log/temperature.log
-# Author: Galen Kim Davis <galen@redkibble.com> under GPL v2.x+
+# Author: Galen Kim Davis <galen@redkibble.com> under MIT License
 # ---------------------------------------------------------------
 
 timestamp() {
