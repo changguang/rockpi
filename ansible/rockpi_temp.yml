@@ -1,0 +1,18 @@
+---
+- name: install temperature logging on rock pi servers
+  hosts: rockpi
+  remote_user: galen
+
+  tasks:
+  - name: copy temperature script to servers
+    copy:
+      src: /usr/bin/temp_log.sh
+      dest: /usr/bin/temp_log.sh
+      mode: 0755      
+  - name: add temperature to cron.d
+    cron:
+      name: add temperature to cron.d
+      hour: "*/5"
+      user: root
+      job: "/usr/bin/temp_log.sh"
+      cron_file: temperature
